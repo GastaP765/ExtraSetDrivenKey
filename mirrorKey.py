@@ -37,9 +37,9 @@ def preparation(*args):
         e = mc.keyTangent(a, q=True, ott=True)
         l = Mdrn[i]
         k = l.replace('.', '_')
+        keep = mc.getAttr(Mdrv[i])
         chk = mc.connectionInfo(Mdrn[i], ied=True)
         if True is chk:
-            print 'delete {}'.format(k)
             mc.delete(k)
 
         for f in range(len(flt)):
@@ -73,6 +73,7 @@ def preparation(*args):
                     mc.keyTangent(k, e=True, index=(idx[j], idx[j]), ott=e[j])
             mc.setAttr(Mdrv[i], 0)
             mc.setAttr(Mdrn[i], 0)
+        mc.setAttr(Mdrv[i], keep)
 
 
     
