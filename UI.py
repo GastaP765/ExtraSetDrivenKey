@@ -102,7 +102,7 @@ class DrvClass(object):
         mc.setParent('..')
         ts1 = mc.textScrollList('ts1', w=175, h=175, sc=self.driverAtt)
         ts2 = mc.textScrollList('ts2', w=175, h=175)
-        fr2 = mc.frameLayout('fr2', l='Driver', w=370, h=30)
+        fr2 = mc.frameLayout('fr2', l='Driven', w=370, h=30)
         mc.setParent('..')
         ts3 = mc.textScrollList('ts3', w=175, h=175, sc=self.drivenAtt)
         ts4 = mc.textScrollList('ts4', ams=True, w=175, h=175)
